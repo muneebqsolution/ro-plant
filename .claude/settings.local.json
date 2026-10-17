@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php artisan *)",
+      "Bash(composer show *)",
+      "Bash(composer require *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8123/login)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://127.0.0.1:8123/)",
+      "Bash(curl -s -b cookies.txt http://127.0.0.1:8123/customers)",
+      "Bash(curl -s -b /tmp/cookies.txt http://127.0.0.1:8123/customers/1)",
+      "Bash(curl -s -b /tmp/cookies.txt http://127.0.0.1:8123/dashboard)",
+      "Bash(grep -oP \"Rs\\\\. [\\\\d,]+\\\\.\\\\d{2}\")",
+      "Bash(php /c/laragon/www/ro-plant-management/artisan tinker --execute=\"echo now\\(\\); echo PHP_EOL; echo config\\('app.timezone'\\);\")",
+      "Bash(php /c/laragon/www/ro-plant-management/artisan tinker '--execute=App\\\\Models\\\\Delivery::all\\(\\)->each\\(fn\\($d\\) => print\\($d->delivery_date . PHP_EOL\\)\\);')",
+      "Bash(php /c/laragon/www/ro-plant-management/artisan config:clear)",
+      "Bash(php /c/laragon/www/ro-plant-management/artisan tinker --execute=\"echo now\\(\\);\")",
+      "Bash(php /c/laragon/www/ro-plant-management/artisan tinker '--execute= *)",
+      "Bash(powershell -Command \"Get-Process php -ErrorAction SilentlyContinue | Select-Object Id,CommandLine\")",
+      "Bash(netstat -ano)",
+      "Bash(powershell -Command \"Stop-Process -Id 292 -Force\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:8123/login --max-time 2)"
+    ]
+  }
+}
